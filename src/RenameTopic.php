@@ -89,8 +89,8 @@ class RenameTopic
         loadLanguage('RenameTopic');
 
         return preg_replace(
-            '/required=\\"required\\" />(.+)<label for=\\"icon\\">/is',
-            'required="required" /><br><label><input type="checkbox" name="renametopic" class="input_check" /> '.$txt['rename_topic'].'</label>$1<label for="icon">',
+            '/required=\\"required\\" \/>(.+)<label for=\\"icon\\">/s',
+            'required="required" /><br><label class="smalltext"><input type="checkbox" name="renametopic" class="input_check" /> '.$txt['rename_topic'].'</label>$1<label for="icon">',
             $buffer
         );
     }
