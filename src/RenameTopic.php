@@ -35,13 +35,18 @@ class RenameTopic
     public static function registerAll()
     {
         $hook_functions = [
+            ['integrate_quickhelp', self::class.'::quickhelp'],
             ['integrate_load_permissions', self::class.'::load_permissions'],
             ['integrate_action_post_before', self::class.'::canPost'],
             ['integrate_before_modify_post', self::class.'::before_modify_post'],
         ];
-        foreach ($hook_functions as list($hook, $function)) {
+        foreach ($hook_functions as list ($hook, $function)) {
             add_integration_function($hook, $function, '', false);
         }
+    }
+
+    public static function quickhelp() {
+        loadLanguage('RenameTopic');
     }
 
     public static function load_permissions(
