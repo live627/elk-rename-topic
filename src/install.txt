@@ -7,11 +7,11 @@
 Rename all posts within a topic
 [list]
 [li]Adds a checkbox underneath the subject box entitled "Rename all posts within this topic"[list]
-[li]Only shows when modifying a topic posst[/li]
+[li]Only shows when modifying a topic post[/li]
 [li]No template edit required[/li]
 [/list]
 [/li]
-[li]Permission entry added within permisssion profiles entitled "Rename all posts within a topic"[/li]
+[li]Permission entry added within permission profiles entitled "Rename all posts within a topic"[/li]
 [/list]
 
-http://addons.ElkArte.net/enhancement/Double-Post-Stopper.html
+http://addons.ElkArte.net/enhancement/Rename-Topic.html
