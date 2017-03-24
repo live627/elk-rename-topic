@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.elkarte.net/site/package-info">
+<package-info xmlns="http://www.elkarte.net/site/package-info">
+    <id>live627:rename_topic</id>
+    <name>Rename Topic</name>
+    <version>1.0</version>
+    <type>modification</type>
+
+    <install for="1.0 - 1.0.99">
+        <readme parsebbc="true">install.txt</readme>
+        <hook hook="integrate_pre_load" file="SUBSDIR/RenameTopic.php" function="RenameTopic::registerAll"/>
+        <require-file name="RenameTopic.php" destination="SUBSDIR"/>
+        <require-file name="RenameTopic.english.php" destination="LANGUAGEDIR/english"/>
+    </install>
+
+    <uninstall for="1.0 - 1.0.99">
+        <hook reverse="true" hook="integrate_pre_load" file="SUBSDIR/RenameTopic.php"
+              function="RenameTopic::registerAll"/>
+        <remove-file name="SUBSDIR/RenameTopic.php"/>
+        <remove-file name="LANGUAGEDIR/english/RenameTopic.english.php"/>
+    </uninstall>
+
+</package-info>
