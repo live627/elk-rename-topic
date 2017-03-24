@@ -3,7 +3,7 @@
 <package-info xmlns="http://www.elkarte.net/site/package-info">
     <id>live627:rename_topic</id>
     <name>Rename Topic</name>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <type>modification</type>
 
     <install for="1.0 - 1.0.99">
