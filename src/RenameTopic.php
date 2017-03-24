@@ -51,8 +51,9 @@ class RenameTopic
         &$hiddenPermissions,
         &$relabelPermissions
     ) {
-        $permissionList['membergroup'] = elk_array_insert(
-            $permissionList['membergroup'],
+        loadLanguage('RenameTopic');
+        $permissionList['board'] = elk_array_insert(
+            $permissionList['board'],
             'modify_replies',
             ['rename_topic' => [true, 'topic', 'moderate']]
         );

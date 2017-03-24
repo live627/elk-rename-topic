@@ -10,3 +10,5 @@
 
 $txt['rename_topic'] = 'Rename all posts within this topic';
 $txt['permissionname_rename_topic'] = 'Rename all posts within a topic';
+$txt['permissionname_rename_topic_own'] = 'Own topic';
+$txt['permissionname_rename_topic_any'] = 'Any topics';
