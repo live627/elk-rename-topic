@@ -116,7 +116,7 @@ class RenameTopic
      */
     public function updateTopicSubject($custom_subject)
     {
-        $db->query(
+        $this->db->query(
             '',
             '
                 UPDATE {db_prefix}messages
