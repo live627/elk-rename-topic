@@ -22,7 +22,7 @@ class RenameTopic
         global $topic, $user_info;
 
         require_once(SUBSDIR.'/Topic.subs.php');
-        list ($this->id_topic, , , $this->id_first_msg, , $this->id_member_started) = getTopicInfo($topic);
+        list ($this->id_topic, , , $this->id_first_msg, , $this->id_member_started) = array_values(getTopicInfo($topic));
         $this->db = database();
         $this->response_prefix = response_prefix();
     }
@@ -63,7 +63,7 @@ class RenameTopic
         global $topic;
 
         // I'm lazy.
-        if (!empty($topic) && (new self)->check() && !isset($_REQUEST['msg'])) {
+        if (!empty($topic) && isset($_REQUEST['msg']) && (new self)->check()) {
             add_integration_function('integrate_buffer', self::class.'::buffer', '', false);
         }
     }
